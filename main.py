@@ -16,6 +16,7 @@ print(non_null)
 #Because the data set is very large we can afford to drop the values that are null
 #first we drop the last column because it only contains 25 non nulls
 car_df = car_df.drop(car_df.columns[-1], axis = 1)
+car_df['condition'] = pd.to_numeric(car_df['condition'], errors='coerce')
 car_df = car_df.dropna()
 
 print(car_df.info())
@@ -34,4 +35,3 @@ car_df['saledate'] = car_df['saledate'].dt.date
 
 
 print(car_df.head(10))
-
