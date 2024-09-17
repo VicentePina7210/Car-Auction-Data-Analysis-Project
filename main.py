@@ -35,3 +35,10 @@ car_df['saledate'] = car_df['saledate'].dt.date
 
 print(car_df.head(10))
 
+#convert the column to a list
+car_color = car_df['color'].to_list()
+
+
+plt.hist(car_color, bins = 10)
+plt.plot()
+plt.show()
