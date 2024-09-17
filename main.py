@@ -36,6 +36,18 @@ car_df['saledate'] = car_df['saledate'].dt.date
 
 print(car_df.head(10))
 
+print("Initial Exploratory Coding: ")
+
+# Get the value counts of 'condition' and sort by ascending order
+condition_counts = car_df['condition'].value_counts().sort_index()
+
+# Plot the sorted data
+condition_counts.plot(kind='bar', title='Number of Cars by Condition')
+plt.xlabel('Condition')
+plt.ylabel('Count')
+plt.show()
+
+
 #convert the column to a list
 car_color = car_df['color'].to_list()
 
