@@ -136,10 +136,10 @@ avg_price_by_state = car_df.groupby('state')['sellingprice'].mean().sort_values(
 print("Average selling price by state type: ")
 print(avg_price_by_state)
 
-# How does the selling value vary by fuel type?
-avg_price_by_fuel = car_df.groupby('fuel')['sellingprice'].mean().sort_values(ascending = False)
-print("Average selling price by fuel type: ")
-print(avg_price_by_fuel)
+# What is the median selling price of cars by state?
+median_price_by_state = car_df.groupby('state')['sellingprice'].median().sort_values(ascending= False)
+print("Median selling price per state:")
+print(median_price_by_state)
 
 # What are the top 5 most common colors?
 color_counts = car_df['color'].value_counts().head(5)
