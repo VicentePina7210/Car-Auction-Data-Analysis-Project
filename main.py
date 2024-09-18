@@ -131,6 +131,8 @@ plt.xlabel('Car Age (years)')
 plt.ylabel('Selling Price')
 plt.show()
 
+
+### Needs correction
 # Which states have the highest selling price?
 avg_price_by_fuel = car_df.groupby('fuel')['sellingprice'].mean().sort_values(ascending = False)
 print("Average selling price by fuel type: ")
@@ -140,9 +142,11 @@ print(avg_price_by_fuel)
 avg_price_by_fuel = car_df.groupby('fuel')['sellingprice'].mean().sort_values(ascending = False)
 print("Average selling price by fuel type: ")
 print(avg_price_by_fuel)
+###
+
 
 # What are the top 5 most common colors?
-color_counts = car_df['paintcolor'].value_counts().head(5)
+color_counts = car_df['color'].value_counts().head(5)
 print("The top 5 most popular colors are:")
 print(color_counts)
 
