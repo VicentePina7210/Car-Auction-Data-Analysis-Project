@@ -163,7 +163,7 @@ plt.xlabel('Selling Price')
 plt.ylabel('Frequency')
 plt.show()
 
-#######################End of First 10 Questions###################################
+#######################End of Middle 10 Questions###################################
 
 #convert the column to a list
 car_color = car_df['color'].to_list()
