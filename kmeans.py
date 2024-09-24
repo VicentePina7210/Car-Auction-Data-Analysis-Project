@@ -64,7 +64,13 @@ class CustomKMeans:
     
     # update centroids based on the average of all data points assigned to the cluster
     def update_centroids(self, data, labels):
-        return None
+        #This is meant retreive the row numbers of the datafram (data.index)
+        #The code np.random.choice is what allows for a random element to be selected from the afformentioned index
+        #The parameter replace=False allows for selection of unique rows
+        random_centroids = np.random.choice(data.index, self.k, replace=False)
+        return df.loc[random_centroids].to_numpy()
+        # This accesses the rows that were generated previously using the random centroids
+        #The function .to_numpy() returns this as numpy array for further use
     
     def predict(self):
         '''
