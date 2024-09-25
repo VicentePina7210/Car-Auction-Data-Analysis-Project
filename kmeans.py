@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
 from sklearn.datasets import make_blobs
-
+'''
 def prep_data():
     car_df = pd.read_csv("car_prices.csv", low_memory=False)
     car_df = car_df.drop(car_df.columns[-1], axis = 1)
@@ -21,10 +21,11 @@ def prep_data():
     return car_df
 
 df = prep_data()
+df = df.select_dtypes(include=[np.number])
+'''
 # TEST 
 # this line only includes numeric columns since Kmeans won't work with non numeric stuff
-df = df.select_dtypes(include=[np.number])
-print(df.head())
+
 class CustomKMeans:
     def __init__(self, k, max_iters = 500, tol = 1e-4, random_state = None):
         self.k = k
@@ -140,11 +141,12 @@ class CustomKMeans:
         return inertia 
 
 
+'''
 kmeans_custom = CustomKMeans(k = 3, max_iters = 100, tol = 1e-4, random_state= 42)
 kmeans_custom.fit(df)
 
 labels = kmeans_custom.predict(df)
-
+'''
 
 
 def plot_clusters(df, labels, centroids, x_col, y_col):
@@ -161,7 +163,7 @@ def plot_clusters(df, labels, centroids, x_col, y_col):
     plt.grid(True)
     plt.show()
 
-
+'''
 
 plot_clusters(df, labels, kmeans_custom.centroids, 'odometer', 'sellingprice')
 
@@ -172,6 +174,8 @@ labels_sklearn = kmeans_sklearn.predict(df)
 
 print(f"Scikit-learn kmeans inertia: {kmeans_sklearn.inertia_}")
 print(f"custom kmeans inertia: {kmeans_custom.inertia_}")
+'''
+
 
 '''
 Basically our charts are coming out really janky because this only works on numeric values and the only straight numeric
