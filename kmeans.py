@@ -145,26 +145,26 @@ kmeans_custom.fit(df)
 
 labels = kmeans_custom.predict(df)
 
-plt.figure(figsize=(8,6))
-plt.scatter(df['condition'], df['sellingprice'], c = labels, cmap='viridis', marker = 'o', edgecolor = 'k', s = 50, alpha = .5)
 
 
-plt.scatter(
-    kmeans_custom.centroids[:, 0],
-    kmeans_custom.centroids[:, 1],
-    c = 'red',
-    marker= 'x',
-    s = 200,
-    label = 'centroids'
-)
+def plot_clusters(df, labels, centroids, x_col, y_col):
+    plt.figure(figsize=(8, 6))
+    plt.scatter(df[x_col], df[y_col], c=labels, cmap='viridis', marker='o', edgecolor='k', s=50, alpha=0.5)
+    
+    # Plot centroids
+    plt.scatter(centroids[:, 0], centroids[:, 1], c='red', marker='x', s=200, label='Centroids')
+    
+    plt.title('KMeans Clustering')
+    plt.xlabel(x_col)
+    plt.ylabel(y_col)
+    plt.legend()
+    plt.grid(True)
+    plt.show()
 
-plt.title('Kmeans clustering custom')
-plt.xlabel('condition')
-plt.ylabel('odometer')
-plt.legend()
-plt.grid(True)
 
-plt.show()
+
+plot_clusters(df, labels, kmeans_custom.centroids, 'odometer', 'sellingprice')
+
 
 kmeans_sklearn = KMeans(n_clusters = 3, max_iter= 100, tol= 1e-4, random_state=42)
 kmeans_sklearn.fit(df)
