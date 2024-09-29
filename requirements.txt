@@ -1,0 +1,7 @@
+# Data manipulation and analysis
+pandas>=1.0.0
+numpy>=1.18.0
+
+# Data visualization
+matplotlib>=3.0.0
+seaborn>=0.11.0
