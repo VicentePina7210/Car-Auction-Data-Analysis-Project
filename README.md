@@ -29,3 +29,5 @@ The insights that are discovered through the analysis of this dataset will hopef
 1. What causes car prices to spike, particularly when a vehicle is older?
 2. Which car makes or models provide the best value in terms of price being steady over time?
 3. In which states are vehicles sold the most, and could the location of a vehicle contribute to it's value?
+4. Can we find search trends that correlate with car sales data
+5. Is the data skewed because of certain states contributing too much data
