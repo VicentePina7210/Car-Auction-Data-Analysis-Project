@@ -1,33 +1,97 @@
-# Car-Auction-Data-Analysis-Project
-A collaboration project that demonstrates proficiency with Python, NumPy, Pandas and general data science principles.
+# Car Auction Data Analysis Project
 
-   ### How to run the code:
+## Overview
+This project is a comprehensive analysis of car auction data, focusing on exploring trends, predicting car prices, and identifying anomalies. The project demonstrates proficiency in data cleaning, exploratory data analysis (EDA), machine learning models, and visualization techniques. It showcases a variety of skills, including data preprocessing, clustering, regression, anomaly detection, and classification.
+
+## Key Features
+
+### 1. Data Cleaning and Preprocessing
+- **Tools Used**: Python (Pandas, NumPy)
+- **Skills Demonstrated**:
+  - Handling missing values and outliers
+  - Standardizing and scaling data
+  - Preparing datasets for machine learning models
+
+### 2. Exploratory Data Analysis (EDA)
+- **Tools Used**: Matplotlib, Seaborn
+- **Skills Demonstrated**:
+  - Visualizing relationships between features (e.g., odometer vs. selling price)
+  - Identifying trends and patterns in car sales data
+  - Creating heatmaps, scatter plots, and histograms
+
+### 3. Machine Learning Models
+#### a. Regression Analysis
+- **Models Used**: Linear Regression, Random Forest Regressor, Decision Tree Regressor
+- **Skills Demonstrated**:
+  - Predicting car prices based on features like year, odometer, and condition
+  - Evaluating model performance using metrics like RMSE and R-squared
+
+#### b. Classification
+- **Models Used**: K-Nearest Neighbors (KNN), Logistic Regression
+- **Skills Demonstrated**:
+  - Classifying car conditions into categories (e.g., Poor, Fair, Good)
+  - Balancing datasets and optimizing hyperparameters
+
+#### c. Clustering
+- **Models Used**: Custom K-Means Implementation
+- **Skills Demonstrated**:
+  - Grouping cars into clusters based on numerical features
+  - Visualizing clusters and centroids
+
+#### d. Anomaly Detection
+- **Models Used**: Isolation Forest, Local Outlier Factor (LOF)
+- **Skills Demonstrated**:
+  - Identifying outliers in the dataset
+  - Analyzing anomalies to uncover unusual patterns
+
+### 4. Visualization and Insights
+- **Tools Used**: Matplotlib, Seaborn
+- **Skills Demonstrated**:
+  - Creating professional visualizations to communicate findings
+  - Highlighting key insights, such as factors influencing car prices
+
+## Project Structure
+```
+Car-Auction-Data-Analysis-Project/
+├── data/
+│   ├── raw/                # Raw, unprocessed data files
+│   ├── cleaned/            # Cleaned and processed data files
+├── docs/                   # Documentation and assignments
+├── notebooks/              # Jupyter notebooks for analysis
+├── src/                    # Python scripts for data processing and modeling
+├── requirements.txt        # Python dependencies
+└── README.md               # Project overview and instructions
+```
+
+## Skills Demonstrated
+- **Programming**: Python (Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn)
+- **Data Analysis**: Data cleaning, EDA, feature engineering
+- **Machine Learning**: Regression, classification, clustering, anomaly detection
+- **Visualization**: Creating insightful plots and charts
+- **Problem-Solving**: Tackling real-world data challenges
+
+## How to Run the Project
 1. Clone the repository:
-```bash
-git clone <https://github.com/VicentePina7210/Car-Auction-Data-Analysis-Project.git>
-```
-2. Run this command in your IDE terminal
-to install required dependencies (pandas, numpy, matplotlib, seaborn):
-
-```bash
-pip3 install -r requirements.txt
-```
+   ```bash
+   git clone https://github.com/yourusername/Car-Auction-Data-Analysis-Project.git
+   cd Car-Auction-Data-Analysis-Project
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 3. Run the data cleaning script:
-```bash
-python src/clean_data.py
-```
-4. Open and run the exploration notebook in jupyter notebook:
-```bash
-notebooks/mainNotebook.ipynb
-```
-  ### About the project:
-The objective of this project is to analyze a used car dataset to discover possible trends, and insights that can reveal useful information that can help with decsion making. The results of this analysis will help with insights such as which factors or characteristics about the used vehicles, influence the selling price of the car.
+   ```bash
+   python src/clean_data.py
+   ```
+4. Explore the notebooks:
+   ```bash
+   jupyter notebook notebooks/
+   ```
 
-The insights that are discovered through the analysis of this dataset will hopefully be something that can be useful to various people. This data can provide information for potential buyers on what to look out for when looking to buy a used vehicles. Likewise, it could also help sellers and dealerships find out what is a fair selling price given the characteristics of their vehicle to sell vehicles quickly.
+## Insights and Takeaways
+- **Factors Influencing Car Prices**: Mileage, condition, and region are key predictors.
+- **Anomalies**: Outliers often represent data entry errors or unique cases.
+- **Clustering**: Grouping cars by features reveals distinct market segments.
 
-  ### Questions:
-1. What causes car prices to spike, particularly when a vehicle is older?
-2. Which car makes or models provide the best value in terms of price being steady over time?
-3. In which states are vehicles sold the most, and could the location of a vehicle contribute to it's value?
-4. Can we find search trends that correlate with car sales data
-5. Is the data skewed because of certain states contributing too much data
+This project highlights a strong foundation in data science and machine learning, with a focus on practical applications and insights.
